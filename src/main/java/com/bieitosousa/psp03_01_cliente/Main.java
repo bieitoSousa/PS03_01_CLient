@@ -120,9 +120,9 @@ public class Main {
 
         String l;
         while ((l = c.sendMessage(n)).contains("no")) {
-            if (l.contains("mayor")) {
+            if (l.contains("menor")) {
                 upIndex = n;
-            } else if (l.contains("menor")) {
+            } else if (l.contains("mayor")) {
                 downIndex = n;
             } else {
                 System.out.println("error");
@@ -131,7 +131,7 @@ public class Main {
             n = (Math.round((upIndex - downIndex) / 2)) + downIndex;
             System.out.println("se carga el mensaje[" + n + "] numero entre {" + downIndex + "," + upIndex + "}");
         }
-        System.out.println("[CLI]fin");
+        System.out.println("[CLI]fin : encontrado numero [" +l+"]");
         c.stopConnection();
     }
 
